@@ -1,0 +1,170 @@
+{
+  "apiVersion": "dashboard.grafana.app/v1alpha1",
+  "kind": "Dashboard",
+  "spec": {
+    "annotations": {
+      "list": [
+        {
+          "$$hashKey": "object:10",
+          "builtIn": 1,
+          "datasource": {
+            "type": "datasource",
+            "uid": "grafana"
+          },
+          "enable": true,
+          "hide": true,
+          "iconColor": "rgba(0, 211, 255, 1)",
+          "name": "Annotations \u0026 Alerts",
+          "type": "dashboard"
+        }
+      ]
+    },
+    "editable": true,
+    "fiscalYearStartMonth": 0,
+    "graphTooltip": 0,
+    "links": [
+      {
+        "asDropdown": false,
+        "icon": "external link",
+        "includeVars": false,
+        "keepTime": false,
+        "tags": [],
+        "targetBlank": true,
+        "title": "Get started fast with Grafana Cloud free tier",
+        "tooltip": "Create Grafana Cloud account",
+        "type": "link",
+        "url": "https://grafana.com/auth/sign-up/create-user?pg=play"
+      }
+    ],
+    "panels": [
+      {
+        "fieldConfig": {
+          "defaults": {},
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 9,
+          "w": 24,
+          "x": 0,
+          "y": 0
+        },
+        "id": 5,
+        "options": {
+          "code": {
+            "language": "plaintext",
+            "showLineNumbers": false,
+            "showMiniMap": false
+          },
+          "content": "# Grafana Variables\n\nThis sample dashboard is intended to show you syntax for how \n[Grafana Variables](https://grafana.com/docs/grafana/latest/dashboards/variables/variable-syntax/) work,\nand how their values can be substituted on dashboards.\n\nYou can [define your own variables in dashboards](https://grafana.com/docs/grafana/latest/dashboards/variables/add-template-variables/). \nThis dashboard defines several variables such as `servers` you can see at the top\nof the page. Try playing with the values\nat the top, and watch how the visualization updates.\n\nThe entire dashboard is just text, so you can hit the ... menu in\nthe upper right of any panel, hit edit, and see how it's done.\n\n# Current Variable Values\n\n* `ConstantVariable`: ${ConstantVariable}\n* `TextVariable`: ${TextVariable}\n* `servers` (which is a Custom variable): ${servers}",
+          "mode": "markdown"
+        },
+        "pluginVersion": "11.6.0-pre-preview1",
+        "title": "Introduction",
+        "type": "text"
+      },
+      {
+        "fieldConfig": {
+          "defaults": {},
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 14,
+          "w": 24,
+          "x": 0,
+          "y": 9
+        },
+        "id": 4,
+        "options": {
+          "code": {
+            "language": "plaintext",
+            "showLineNumbers": false,
+            "showMiniMap": false
+          },
+          "content": "# Template Variable Formatting Options\n\nSyntax: `${var_name:option}`\n\nChange the `servers` variable above to test the interpolation for the different formatting options in the table below. \n\n[Documentation for advanced formatting](https://grafana.com/docs/grafana/latest/dashboards/variables/variable-syntax/#advanced-variable-format-options)\n\n## Live Examples\n\n\u003ctable\u003e\n    \u003ctr\u003e\n        \u003ctd\u003eFilter Option\u003c/td\u003e\n        \u003ctd\u003eExample\u003c/td\u003e\n        \u003ctd\u003eInterpolated\u003c/td\u003e\n        \u003ctd\u003eDescription\u003c/td\u003e\n    \u003c/tr\u003e\n    \u003ctr\u003e\n        \u003ctd\u003e\u003ccode\u003e glob \u003c/code\u003e \u003c/td\u003e\n        \u003ctd\u003e \u003ccode\u003e${var_name:glob}\u003c/code\u003e\u003c/td\u003e\n        \u003ctd\u003e ${servers:glob}\u003c/td\u003e\n        \u003ctd\u003e (Default) Formats multi-value variable into a glob (for Graphite queries) \u003c/td\u003e\n    \u003c/tr\u003e\n    \u003c/tr\u003e\n     \u003ctr\u003e\n        \u003ctd\u003e\u003ccode\u003e regex \u003c/code\u003e \u003c/td\u003e\n        \u003ctd\u003e \u003ccode\u003e${var_name:regex}\u003c/code\u003e\u003c/td\u003e\n        \u003ctd\u003e ${servers:regex}\u003c/td\u003e\n        \u003ctd\u003e  Formats multi-value variable into a regex string \u003c/td\u003e\n    \u003c/tr\u003e\n    \u003c/tr\u003e\n     \u003ctr\u003e\n        \u003ctd\u003e\u003ccode\u003e pipe \u003c/code\u003e \u003c/td\u003e\n        \u003ctd\u003e \u003ccode\u003e${var_name:pipe}\u003c/code\u003e\u003c/td\u003e\n        \u003ctd\u003e ${servers:pipe}\u003c/td\u003e\n        \u003ctd\u003e Formats multi-value variable into a pipe-separated string\u003c/td\u003e\n    \u003c/tr\u003e\n    \u003ctr\u003e\n        \u003ctd\u003e\u003ccode\u003e csv \u003c/code\u003e \u003c/td\u003e\n        \u003ctd\u003e \u003ccode\u003e${var_name:csv}\u003c/code\u003e\u003c/td\u003e\n        \u003ctd\u003e ${servers:csv}\u003c/td\u003e\n        \u003ctd\u003e Formats multi-value variable into a comma-separated string \u003c/td\u003e\n    \u003c/tr\u003e\n    \u003ctr\u003e\n        \u003ctd\u003e\u003ccode\u003e distributed \u003c/code\u003e \u003c/td\u003e\n        \u003ctd\u003e \u003ccode\u003e${var_name:distributed}\u003c/code\u003e\u003c/td\u003e\n        \u003ctd\u003e ${servers:distributed}\u003c/td\u003e\n        \u003ctd\u003e Formats multi-value variable in custom format for OpenTSDB. \u003c/td\u003e\n    \u003c/tr\u003e\n    \u003ctr\u003e\n        \u003ctd\u003e\u003ccode\u003e lucene \u003c/code\u003e \u003c/td\u003e\n        \u003ctd\u003e \u003ccode\u003e${var_name:lucene}\u003c/code\u003e\u003c/td\u003e\n        \u003ctd\u003e ${servers:lucene}\u003c/td\u003e\n        \u003ctd\u003e Formats multi-value variable as lucene expression \u003c/td\u003e\n    \u003c/tr\u003e\n    \u003ctr\u003e\n        \u003ctd\u003e\u003ccode\u003e raw \u003c/code\u003e \u003c/td\u003e\n        \u003ctd\u003e \u003ccode\u003e${var_name:raw}\u003c/code\u003e\u003c/td\u003e\n        \u003ctd\u003e ${servers:raw}\u003c/td\u003e\n        \u003ctd\u003e  Turns off data source specific formatting (like single quotes in an SQL query) \u003c/td\u003e\n    \u003c/tr\u003e\n\u003c/table\u003e",
+          "mode": "markdown"
+        },
+        "pluginVersion": "11.6.0-pre-preview1",
+        "title": "Variable Formatting",
+        "type": "text"
+      }
+    ],
+    "preload": false,
+    "refresh": "",
+    "schemaVersion": 41,
+    "tags": [],
+    "templating": {
+      "list": [
+        {
+          "current": {
+            "text": [
+              "test.1",
+              "test2"
+            ],
+            "value": [
+              "test.1",
+              "test2"
+            ]
+          },
+          "includeAll": true,
+          "multi": true,
+          "name": "servers",
+          "options": [
+            {
+              "selected": true,
+              "text": "test.1",
+              "value": "test.1"
+            },
+            {
+              "selected": true,
+              "text": "test2",
+              "value": "test2"
+            },
+            {
+              "selected": false,
+              "text": "test3",
+              "value": "test3"
+            }
+          ],
+          "query": "test.1,test2,test3",
+          "type": "custom"
+        },
+        {
+          "current": {
+            "text": "3.141592",
+            "value": "3.141592"
+          },
+          "hide": 2,
+          "name": "ConstantVariable",
+          "query": "3.141592",
+          "skipUrlSync": true,
+          "type": "constant"
+        },
+        {
+          "current": {
+            "text": "Hello, world!",
+            "value": "Hello, world!"
+          },
+          "description": "",
+          "name": "TextVariable",
+          "options": [
+            {
+              "selected": true,
+              "text": "Hello, world!",
+              "value": "Hello, world!"
+            }
+          ],
+          "query": "Hello, world!",
+          "type": "textbox"
+        }
+      ]
+    },
+    "time": {
+      "from": "now-6h",
+      "to": "now"
+    },
+    "timepicker": {},
+    "timezone": "",
+    "title": "NAMECHANGE",
+    "weekStart": ""
+  }
+}
