@@ -31,7 +31,7 @@
       },
       "id": 13,
       "panels": [],
-      "title": "Web Analytics Dashboard",
+      "title": "Web Analytics Dashboard - Version 2",
       "type": "row"
     },
     {
@@ -117,9 +117,7 @@
         "orientation": "auto",
         "percentChangeColorMode": "standard",
         "reduceOptions": {
-          "calcs": [
-            "sum"
-          ],
+          "calcs": ["sum"],
           "fields": "",
           "values": false
         },
@@ -177,9 +175,7 @@
         "orientation": "auto",
         "percentChangeColorMode": "standard",
         "reduceOptions": {
-          "calcs": [
-            "sum"
-          ],
+          "calcs": ["sum"],
           "fields": "",
           "values": false
         },
@@ -244,9 +240,7 @@
         "orientation": "auto",
         "percentChangeColorMode": "standard",
         "reduceOptions": {
-          "calcs": [
-            "sum"
-          ],
+          "calcs": ["sum"],
           "fields": "",
           "values": false
         },
@@ -270,9 +264,7 @@
         {
           "id": "reduce",
           "options": {
-            "reducers": [
-              "sum"
-            ]
+            "reducers": ["sum"]
           }
         },
         {
@@ -667,9 +659,7 @@
         "footer": {
           "countRows": false,
           "fields": "",
-          "reducer": [
-            "sum"
-          ],
+          "reducer": ["sum"],
           "show": false
         },
         "showHeader": true,
@@ -696,9 +686,7 @@
         {
           "id": "reduce",
           "options": {
-            "reducers": [
-              "sum"
-            ]
+            "reducers": ["sum"]
           }
         },
         {
@@ -774,9 +762,7 @@
         "footer": {
           "countRows": false,
           "fields": "",
-          "reducer": [
-            "sum"
-          ],
+          "reducer": ["sum"],
           "show": false
         },
         "showHeader": true,
@@ -803,9 +789,7 @@
         {
           "id": "reduce",
           "options": {
-            "reducers": [
-              "sum"
-            ]
+            "reducers": ["sum"]
           }
         },
         {
@@ -922,9 +906,7 @@
         "footer": {
           "countRows": false,
           "fields": "",
-          "reducer": [
-            "sum"
-          ],
+          "reducer": ["sum"],
           "show": false
         },
         "showHeader": true,
@@ -951,9 +933,7 @@
         {
           "id": "reduce",
           "options": {
-            "reducers": [
-              "sum"
-            ]
+            "reducers": ["sum"]
           }
         },
         {
@@ -1029,9 +1009,7 @@
         "footer": {
           "countRows": false,
           "fields": "",
-          "reducer": [
-            "sum"
-          ],
+          "reducer": ["sum"],
           "show": false
         },
         "showHeader": true,
@@ -1058,9 +1036,7 @@
         {
           "id": "reduce",
           "options": {
-            "reducers": [
-              "sum"
-            ]
+            "reducers": ["sum"]
           }
         },
         {
